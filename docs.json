@@ -10,6 +10,14 @@
   "favicon": "/images/WEMIXFI_Monochrome_Black.png",
 
   "navigation": {
+    "global": {
+      "languages": [
+        {
+          "language": "ko",
+          "href": "https://wemix.fi"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Testnet Docs",
