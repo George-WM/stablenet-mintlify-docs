@@ -1,0 +1,50 @@
+---
+title: "Getting Started"
+description: "Install, build, and run your first StableNet node."
+---
+
+This guide provides an introduction to installing, building, and running your first StableNet node. It covers the essential prerequisites, build process, and initial node setup to get you operational quickly.
+
+For detailed build instructions and CI/CD pipeline information, see **Installation and Building**.  
+For comprehensive configuration options, see **Node Configuration**.  
+For genesis block creation and customization, see **Genesis Setup and Network Types**.
+
+---
+
+## Overview
+
+StableNet is a stablecoin-focused blockchain that uses the WBFT (WEMIX Byzantine Fault Tolerance) consensus engine, referred to as **Anzeon** in this implementation.
+
+The primary executable is `gstable`, which functions as both a full node and a validator. Unlike standard Ethereum, StableNet requires a custom genesis configuration to deploy governance contracts at block 0 and initialize the validator set.
+
+---
+
+## Prerequisites
+
+### Required Dependencies
+
+| Dependency | Minimum Version | Purpose |
+|---|---|---|
+| Go | 1.20 or later | Building all executables |
+| C Compiler | gcc / clang | Compiling CGO dependencies |
+| Git | Any recent | Cloning the repository |
+
+### Hardware Requirements
+
+| Configuration | CPU | RAM | Storage | Network |
+|---|---|---|---|---|
+| Minimum | 2+ cores | 4 GB | 1 TB | 8 Mbps |
+| Recommended | 4+ cores | 16 GB+ | SSD 1 TB+ | 25+ Mbps |
+
+---
+
+## Build Process
+
+### Building from Source
+
+The build system is managed via `Makefile` and `build/ci.go`.
+
+Build the main executable:
+
+```bash
+make gstable

@@ -23,7 +23,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "docs/getting-started/top",
+
               "docs/getting-started/installation-and-building",
               "docs/getting-started/node-configuration",
               "docs/getting-started/genesis-setup-and-network-types"
