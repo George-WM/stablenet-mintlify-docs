@@ -18,23 +18,28 @@
         }
       ]
     },
-    "tabs": [
+    "versions": [
       {
-        "tab": "Testnet Docs",
-        "groups": [
+        "version": "이건 뭔데",
+        "tabs": [
           {
-            "group": "StableNet",
-            "pages": [
-              "testnet-docs/stable-net/test",
-              "testnet-docs/stable-net/overview"
-            ]
-          },
-          {
-            "group": "Getting Started",
-            "pages": [
-              "testnet-docs/getting-started/installation-and-building",
-              "testnet-docs/getting-started/node-configuration",
-              "testnet-docs/getting-started/genesis-setup-and-network-types"
+            "tab": "Testnet Docs",
+            "groups": [
+              {
+                "group": "StableNet",
+                "pages": [
+                  "testnet-docs/stable-net/test",
+                  "testnet-docs/stable-net/overview"
+                ]
+              },
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "testnet-docs/getting-started/installation-and-building",
+                  "testnet-docs/getting-started/node-configuration",
+                  "testnet-docs/getting-started/genesis-setup-and-network-types"
+                ]
+              }
             ]
           }
         ]
