@@ -17,6 +17,7 @@
           {
             "group": "StableNet",
             "pages": [
+              "testnet-docs/stable-net/test",
               "testnet-docs/overview"
             ]
           },
