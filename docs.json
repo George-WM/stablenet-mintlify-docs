@@ -23,7 +23,7 @@
           {
             "group": "Getting Started",
             "pages": [
-
+              "testnet-docs/getting-started/untitled-page",
               "docs/getting-started/installation-and-building",
               "docs/getting-started/node-configuration",
               "docs/getting-started/genesis-setup-and-network-types"
