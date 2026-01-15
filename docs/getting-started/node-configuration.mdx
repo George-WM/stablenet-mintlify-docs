@@ -1,0 +1,48 @@
+---
+title: "Node Configuration"
+description: "How to configure a StableNet node using CLI flags or TOML configuration files."
+---
+
+## Overview
+
+This guide explains how to configure a StableNet node (`gstable`) using command-line flags or a TOML configuration file.
+
+It covers:
+- Network selection
+- Data directories
+- Database and state settings
+- Synchronization
+- RPC and P2P networking
+- Validator and mining configuration
+
+If you haven’t built the node yet, see:
+- Installation and Building
+
+---
+
+## Configuration Methods
+
+StableNet supports two configuration methods:
+
+1. **Command-line flags**
+2. **TOML configuration file**
+
+Configuration priority (highest → lowest):
+
+1. Command-line flags  
+2. Configuration file  
+3. Default values  
+
+CLI flags always override values defined in a config file.
+
+---
+
+## Network Selection
+
+### Built-in Networks
+
+Use predefined flags to select a network:
+
+```bash
+gstable --mainnet
+gstable --testnet

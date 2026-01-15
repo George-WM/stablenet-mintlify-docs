@@ -1,0 +1,110 @@
+---
+title: "StableNet Overview"
+description: "High-level overview of the StableNet blockchain architecture, economics, and governance model."
+---
+
+## Purpose
+
+This document provides a high-level introduction to the StableNet blockchain, its stablecoin-focused architecture, key differences from standard Ethereum, and the role of the Anzeon WBFT consensus and governance system.
+
+## Scope
+
+This overview covers the fundamental design principles and architecture of StableNet. For detailed guides, refer to:
+
+- Node setup and configuration: Getting Started
+- Consensus internals: WBFT Consensus Protocol
+- Governance contracts: System Contracts Overview
+- Gas fee mechanics: Gas Fee Policy
+
+---
+
+## What is StableNet?
+
+StableNet is a blockchain protocol designed specifically for stablecoin operations, forked from the WBFT (WEMIX Byzantine Fault Tolerance) implementation. It maintains full EVM compatibility while introducing fundamental changes to support a fiat-pegged stablecoin as the native base coin used for gas payments.
+
+### Core Innovation
+
+Unlike traditional blockchains where the base coin is pre-minted and subject to market volatility, StableNet implements a **1:1 fiat-pegged base coin** with dynamic minting and burning. Supply changes are controlled through a decentralized oracle-based minter system that verifies real-world fiat deposits and withdrawals.
+
+### Key Characteristics
+
+- Proof-of-Authority (PoA) validator architecture using Anzeon WBFT
+- Byzantine Fault Tolerant consensus
+- Zero inflation (no block rewards)
+- Governance-controlled priority fee (`gasTip`)
+- Base fees paid to validators (not burned)
+- ERC20-compatible native coin via `NativeCoinAdapter`
+
+---
+
+## Architectural Differences from Ethereum
+
+| Aspect | Ethereum | StableNet |
+|---|---|---|
+| Consensus | PoS (Beacon Chain) | PoA with WBFT |
+| Base Coin | ETH | Fiat-pegged stablecoin |
+| Coin Supply | Fixed + rewards | Dynamic mint/burn |
+| Block Rewards | Yes | No |
+| Base Fee | Burned | Paid to validators |
+| Priority Fee | User-defined | Governance-defined |
+| Block Time | ~12s | ~1s (configurable) |
+
+---
+
+## System Architecture Overview
+
+StableNet follows the standard Ethereum client architecture with critical modifications in the consensus, genesis initialization, gas policy, and system contracts.
+
+Key components include:
+
+- Node initialization and lifecycle management
+- WBFT consensus engine
+- Modified miner/worker pipeline
+- System contracts injected at genesis
+- ERC20-compatible native coin adapter
+
+---
+
+## Stablecoin Economics Model
+
+StableNet enforces **zero inflation** and a **strict 1:1 fiat peg**.
+
+### Economic Principles
+
+1. No speculative issuance or pre-mining
+2. Supply changes only via mint/burn
+3. Fiat-backed issuance verified off-chain
+4. Validator revenue derived solely from transaction fees
+5. Fully auditable on-chain supply changes
+
+### Fee Distribution
+
+All transaction fees are paid directly to the block validator:
+
+- `baseFee`: protocol-controlled
+- `gasTip`: governance-controlled
+- No fee burning
+- No block rewards
+
+---
+
+## Governance System
+
+StableNet uses on-chain governance with five system contracts deployed at fixed addresses during genesis:
+
+- **NativeCoinAdapter (0x1000)** – ERC20 interface for the native coin
+- **GovValidator (0x1001)** – validator set and gas policy
+- **GovMasterMinter (0x1002)** – minter registry
+- **GovMinter (0x1003)** – mint/burn approval
+- **GovCouncil (0x1004)** – future governance extensions
+
+---
+
+## Next Steps
+
+To explore StableNet in more detail:
+
+- Run a node: Getting Started
+- Understand consensus: WBFT Consensus Protocol
+- Interact with the native coin: NativeCoinAdapter
+- Operate a validator: Validator Operations

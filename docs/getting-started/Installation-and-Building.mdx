@@ -1,0 +1,27 @@
+---
+title: "Installation and Building"
+description: "How to build the StableNet node client (gstable) from source or Docker."
+---
+
+## Overview
+
+This guide explains how to build the StableNet node client (`gstable`) from source.  
+It covers local builds for development, CI-style builds, cross-compilation, and Docker-based builds.
+
+If you are looking to **run an already built node**, see:
+- Node configuration
+- Genesis setup and network types
+
+---
+
+## Prerequisites
+
+### Go
+
+StableNet requires **Go 1.22 or later**.
+
+The production build uses Go **1.22.x**.  
+If your local Go version differs, the build system can automatically download the correct version.
+
+```bash
+go version
