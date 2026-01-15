@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "stablenet",
+  "theme": "almond",
+  "name": "StableNet Developer Docs",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/WEMIXFI_Monochrome_Black.png",
 
   "navigation": {
     "tabs": [
@@ -41,8 +41,12 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "StableNet",
+        "href": "https://stablenet.network"
+      },
+      {
+        "label": "Explorer",
+        "href": "https://explorer.stablenet.network"
       }
     ],
     "primary": {
