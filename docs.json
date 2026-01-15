@@ -8,12 +8,32 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": [
-    {
-      "group": "Testnet",
-      "pages": ["testnet/overview"]
-    }
-  ],
+
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Testnet Docs",
+        "groups": [
+          {
+            "group": "StableNet",
+            "pages": [
+              "docs/stablenet/overview"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "pages": [
+              "docs/getting-started/top",
+              "docs/getting-started/installation-and-building",
+              "docs/getting-started/node-configuration",
+              "docs/getting-started/genesis-setup-and-network-types"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
